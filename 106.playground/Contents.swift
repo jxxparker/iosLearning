@@ -1,18 +1,18 @@
 struct Town {
-    let name = "Jihuns"
-    var citizens = ["jihun", "albert"]
-    var resources = ["Grain": 100, "Ore": 42, "Wool": 75]
+    let name: String
+    var citizens: [String]
+    var resources: [String: Int]
+    
+    init(name: String, citizens: [String], resources: [String: Int]) {
+        self.name = name
+        self.citizens = citizens
+        self.resources = resources
+    }
     
     func fortify() {
         print("defences increased!")
     }
 }
 
-var myTown = Town() //initialized Town to myTown
-print(myTown.citizens)
-print("\(myTown.name) has \(myTown.resources["Grain"]!) bags of grain")
-
-myTown.citizens.append("Mike Jordan")
-print(myTown.citizens )
-
-myTown.fortify()
+var anotherTown = Town(name: "Jihun", citizens: ["mike jordans"], resources: ["Chicago": 100])
+print(anotherTown)
