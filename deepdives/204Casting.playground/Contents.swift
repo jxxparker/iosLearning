@@ -21,6 +21,21 @@ class Fish: Animal {
 
 let jihun = Human(n: "Jihun Park")
 let jordan = Human(n: "Jordan Mike")
-let james = Fish(n: "James Kim")
+let james = Fish(n: "James Kim Fish")
 
 let neighbors = [jihun, jordan, james]
+
+//if neighbors[0] is Human {
+//    print("first neighbors is a human")
+//}
+
+func findNemo(from animals: [Animal]) {
+    for animal in animals {
+        if animal is Fish {
+            print(animal.name)
+        }
+    }
+}
+
+findNemo(from: neighbors)
+
