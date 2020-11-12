@@ -33,6 +33,8 @@ func findNemo(from animals: [Animal]) {
     for animal in animals {
         if animal is Fish {
             print(animal.name)
+            let fish = animal as! Fish
+            fish.breatheUnderWater()
         }
     }
 }
